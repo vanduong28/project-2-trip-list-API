@@ -15,7 +15,7 @@ class CitiesController < ProtectedController
 
   # POST /cities
   def create
-    @city = City.new(city_params)
+    @city = current_user.cities.build(city_params)
 
     if @city.save
       render json: @city, status: :created, location: @city
@@ -46,6 +46,7 @@ class CitiesController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def city_params
+      # REMOVE user_id hard code
       params.require(:city).permit(:name, :state, :country)
     end
 end
