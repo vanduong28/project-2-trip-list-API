@@ -40,7 +40,7 @@ class CitiesController < ProtectedController
     #   # if user is not valid then display error indicating user not authorized
     #   render json: 'Not authorized', status: :unprocessable_entity
     # end
-    if @city.update(cities_params)
+    if @city.update(city_params)
       head :no_content
     else
       render json: @city.errors, status: :unprocessable_entity
