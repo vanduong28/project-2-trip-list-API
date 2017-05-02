@@ -1,19 +1,34 @@
 # Project 2 API
 
-A template for starting projects with `rails-api`. Includes authentication.
+## Overview
+API for the WanderList application. Allows users to register and
+create a list of cities.
 
-At the beginning of each cohort, update the versions in [`Gemfile`](Gemfile).
+## Technologies Used
+-   Ruby
+-   Rails
 
-## Dependencies
+## Entity Relationship Diagram
+[Imgur](http://i.imgur.com/JOvIbe0.jpg)
 
-Install with `bundle install`.
+## API Endpoints
 
--   [`rails-api`](https://github.com/rails-api/rails-api)
--   [`rails`](https://github.com/rails/rails)
--   [`active_model_serializers`](https://github.com/rails-api/active_model_serializers)
--   [`ruby`](https://www.ruby-lang.org/en/)
--   [`postgres`](http://www.postgresql.org)
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| DELETE | `/sign-out/:id`        | `users#signout`   |
+| PATCH  | `/change-password/:id` | `users#changepw`  |
+| GET    | `/cities`              | `cities#index`    |
+| POST   | `/cities`              | `cities#create`   |
+| GET    | `/cities/:id`          | `cities#show`     |
+| PATCH  | `/cities/:id`          | `cities#update`   |
+| DELETE | `/cities/:id`          | `cities#destroy`  |
 
-Until Rails 5 is released, this template should follow the most recent released
-version of Rails 4, as well as track `master` branches for `rails-api` and
-`active_model_serializers`.
+
+## Link to client repository
+https://github.com/vanduong28/project-2-trip-list-client
+
+## Installation
+1. Install with 'bundle install'.
+2. Start with 'bin/rails server'.
