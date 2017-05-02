@@ -8,3 +8,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+cities = City.create([{ name: 'Chicago', state: 'Illinois', country: 'United
+  States of America' }, { name: 'Seattle', state: 'Washington', country: 'United
+  States of America' }, { name: 'Dallas', state: 'Texas', country: 'United
+  States of America' }])

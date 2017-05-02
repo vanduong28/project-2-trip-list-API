@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(version: 20170426204020) do
   enable_extension "plpgsql"
 
   create_table "cities", force: :cascade do |t|
+    t.integer  "user_id",    null: false
     t.string   "name"
     t.string   "state"
     t.string   "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cities_on_user_id", using: :btree
   end
 
   create_table "examples", force: :cascade do |t|
