@@ -29,6 +29,9 @@ create a list of cities.
 ## Link to client repository
 https://github.com/vanduong28/project-2-trip-list-client
 
+## Link to deployed API
+https://secure-lowlands-17816.herokuapp.com/
+
 ## Installation
 1. Install with 'bundle install'.
 2. Start with 'bin/rails server'.
